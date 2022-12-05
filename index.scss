@@ -1,0 +1,201 @@
+@import "scss/all.scss";
+// @import "open-props/normalize";
+// @import "open-props/buttons";
+
+@include my-reset;
+@include media-reduce-motion;
+
+body {
+   display: grid;
+   place-items: center;
+   font-family: var(--font-primary);
+   background-color: var(--gray-2);
+}
+
+img {
+   max-width: 100%;
+}
+
+.main {
+   display: grid;
+   grid-auto-rows: minmax(var(--size-8), auto);
+   justify-items: center;
+   align-items: center;
+   //
+   max-width: calc(var(--size-15) * 1.3);
+   min-width: 23.4375rem;
+   padding-inline: var(--size-5);
+   padding-block-start: var(--size-8);
+}
+
+.logo {
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      //
+      margin-block-end: var(--size-8);
+   }
+   &__img {
+      width: 4rem;
+   }
+}
+
+.header {
+   &__wrapper {
+      text-align: center;
+      & > * {
+         margin-block-end: var(--size-3);
+      }
+   }
+
+   &__primary {
+      color: hsl(var(--neutral-gray-1));
+      font-weight: weight("light");
+      text-align: center;
+      font-size: var(--font-size-fluid-2);
+
+      & > span {
+         font-weight: var(--font-weight-7);
+         color: hsl(var(--neutral-blue-1));
+      }
+   }
+
+   &__text {
+      font-size: var(--font-size-fluid-0);
+      font-weight: var(--font-weight-3);
+      color: hsl(var(--neutral-blue-1));
+   }
+}
+
+.form {
+   display: grid;
+   grid-auto-flow: row;
+   gap: var(--size-2);
+   justify-items: stretch;
+   //
+   width: 90%;
+   margin-block: var(--size-4);
+
+   &__comp {
+      @extend %form_input;
+   }
+
+   &__email {
+      width: 100%;
+      font-size: var(--font-size-1);
+
+      &.invalid {
+         border-color: hsl(var(--secondary-red-1));
+         &:focus-visible {
+            outline: 2px solid hsl(var(--secondary-red-1));
+         }
+      }
+
+      &.invalid + .form__label {
+         transform: translateY(0);
+         visibility: visible;
+         opacity: 1;
+      }
+
+      &.invalid ~ .btn {
+         transform: translateY(0);
+      }
+      &.valid {
+         border-color: hsl(var(--green-5-hsl));
+      }
+   }
+
+   &__label {
+      font-size: var(--font-size-0);
+      color: hsl(var(--secondary-red-1));
+      font-style: italic;
+      font-weight: var(--font-weight-6);
+      text-align: center;
+
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(calc(-1 * var(--size-7)));
+      //
+      transition: visibility 0s, opacity var(--ttiming), transform var(--ttiming);
+   }
+
+   .btn {
+      @extend %btn;
+      transform: translateY(calc(-1 * var(--size-5)));
+      transition: transform var(--ttiming);
+   }
+}
+
+.splash {
+   &__wrapper {
+      margin-block: var(--size-2);
+   }
+}
+
+.social-links {
+   &__wrapper {
+      display: flex;
+      gap: var(--size-3);
+      //
+      margin-block-start: var(--size-11);
+   }
+
+   &__link {
+      //
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //
+      width: calc(var(--size-7) * 1.35);
+      border: 1px solid hsl(var(--secondary-blue-1));
+      border-radius: 100px;
+      aspect-ratio: 1;
+
+      svg {
+         width: var(--size-3);
+         aspect-ratio: 1;
+         fill: hsl(var(--primary-blue-1));
+      }
+
+      &:hover {
+         background-color: hsl(var(--primary-blue-1));
+         & > svg {
+            fill: white;
+         }
+      }
+      &:active {
+         background-color: hsl(var(--primary-blue-1));
+         & > svg {
+            fill: white;
+         }
+         filter: brightness(1.2);
+      }
+   }
+}
+
+.copyright {
+   &__wrapper {
+      margin-block: var(--size-6);
+   }
+   &__copy {
+      color: hsl(var(--neutral-gray-1));
+      font-size: var(--font-size-0);
+   }
+}
+
+.footer {
+   display: flex;
+   padding-block-end: var(--size-8);
+
+   .attribution {
+      color: hsl(var(--neutral-blue-1));
+      font-size: var(--font-size-0);
+      opacity: 0.5;
+      text-align: center;
+   }
+   .attribution a {
+      color: hsl(228, 45%, 44%);
+   }
+}
+@include media-desktop;

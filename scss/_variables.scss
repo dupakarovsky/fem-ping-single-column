@@ -1,0 +1,29 @@
+/////////////////////////////
+/// SASS VARIABLES
+// Place SASS variables here
+
+/////////////////////////////
+/// CSS VARIABLES
+/// Place CSS Variables here
+:root {
+   --primary-blue-1: 223 87% 63%; // hsl(223, 87%, 63%);
+
+   --secondary-blue-1: 223 100% 88%; // hsl(223, 100%, 88%);
+   --secondary-red-1: 354 100% 66%; // hsl(354, 100%, 66%);
+
+   --neutral-gray-1: 0 0% 59%; // hsl(0, 0%, 59%);
+   --neutral-blue-1: 209 33% 12%; // hsl(209, 33%, 12%);
+
+   --font-primary: "Libre Franklin";
+   --ttiming: 0.25s;
+
+   // Colors for Dark Theme
+   --surface-light: var(--gray-3-hsl); // var(--gray-3);
+   --text-light: var(--gray-10-hsl); // var(--gray-10);
+   --brand-light: var(--purple-7-hsl); // var(--purple-7);
+
+   // Colors for Light Theme
+   --surface-dark: var(--gray-10-hsl); // var(--gray-10);
+   --text-dark: var(--gray-3-hsl); // var(--gray-3);
+   --brand-dark: var(--purple-7-hsl); // var(--orange-5);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <title>Frontend Mentor - Ping coming soon page</title>
+      <meta charset="utf-8" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="description" content="🙂" />
+      <meta name="color-scheme" content="dark light" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+         rel="stylesheet"
+      />
+
+      <link rel="stylesheet" href="index.scss" />
+      <script defer type="module" src="index.js"></script>
+   </head>
+   <body>
+      <main class="main">
+         <!-- LOGO -->
+         <div class="logo__wrapper">
+            <img class="logo__img" src="/images/logo.svg" alt="Ping Logo" aria-hidden="true" />
+         </div>
+
+         <!-- HEADER  -->
+         <div class="header__wrapper">
+            <h1 class="header__primary">We are launching <span>soon!</span></h1>
+            <p class="header__text">Subscribe and get notified!</p>
+         </div>
+
+         <!-- FORM  -->
+         <form action="#" class="form" novalidate>
+            <input
+               class="form__comp form__email"
+               type="email"
+               name="email"
+               id="email"
+               placeholder="Your email address..."
+            />
+            <label class="form__label" for="email" id="email-label">Please provide a valid email address</label>
+            <button class="form__comp btn" class="btn" type="submit">Notify Me</button>
+         </form>
+
+         <!-- SPLASH IMAGE  -->
+         <div class="splash__wrapper">
+            <img class="splash__img" src="./images/illustration-dashboard.png" alt="An illustration of a dashboard" />
+         </div>
+
+         <!-- SOCIAL LINKS  -->
+         <div class="social-links__wrapper">
+            <a class="social-links__link" href="http://www.facebook.com">
+               <svg aria-hidden="true">
+                  <use xlink:href="./images/symbol-defs.svg#icon-facebook"></use>
+               </svg>
+            </a>
+            <a class="social-links__link" href="http://www.twitter.com">
+               <svg aria-hidden="true">
+                  <use xlink:href="./images/symbol-defs.svg#icon-twitter"></use>
+               </svg>
+            </a>
+            <a class="social-links__link" href="http://www.instagram.com">
+               <svg aria-hidden="true">
+                  <use xlink:href="./images/symbol-defs.svg#icon-instagram"></use>
+               </svg>
+            </a>
+         </div>
+
+         <!-- COPIRIGHT  -->
+         <div class="copyright__wrapper">
+            <p class="copyright__copy">&copy; Copyright Ping. All rights reserved.</p>
+         </div>
+      </main>
+
+      <footer class="footer">
+         <p class="attribution">
+            Challenge by
+            <a
+               href="https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da"
+               target="_blank"
+               >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/dupakarovsky">Dupakarovsky</a>.
+         </p>
+      </footer>
+   </body>
+</html>

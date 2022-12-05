@@ -1,0 +1,30 @@
+%form_input {
+   width: 100%;
+   color: hsl(var(--neutral-blue-1));
+   font-size: var(--font-size-0);
+   background-color: transparent;
+   padding: calc(var(--size-2) * 1.5) var(--size-7);
+   border: none;
+   border: 1px solid hsl(var(--secondary-blue-1));
+   border-radius: 100px;
+
+   &:placeholder-shown {
+      color: hsl(var(--neutral-gray-1));
+   }
+}
+
+%btn {
+   color: hsl(var(--secondary-blue-1));
+   font-weight: var(--font-weight-6);
+   background-color: hsl(var(--primary-blue-1));
+   border: none;
+   box-shadow: 0 10px 15px hsl(var(--primary-blue-1) / 0.25);
+   cursor: pointer;
+
+   &:hover {
+      filter: brightness(1.2);
+   }
+   &:active {
+      filter: brightness(1.4);
+   }
+}

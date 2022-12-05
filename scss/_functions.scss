@@ -1,0 +1,6 @@
+@use "maps";
+@use "sass:map";
+
+@function weight($value) {
+   @return map.get(maps.$font-weights, $value);
+}
